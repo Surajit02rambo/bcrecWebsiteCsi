@@ -502,10 +502,33 @@ body {
 .record-section .records{
   height: 250px;
   width: 250px;
-  background-color: rgb(56, 52, 52);
+  background-color: rgb(54, 54, 54);
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: "Kumbh Sans", sans-serif;
+  padding: 20px;
+}
+
+.records .icon{
+  margin-top: 20px;
+  color: rgb(77, 139, 255);
+}
+.records h2{
+  font-size: 55px;
+  margin-top: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.records h3{
+  font-size: 25px;
+  font-weight: 400;
+  color: white;
+  margin-top: -40px;
 }
 
 .record-section .records:hover{
@@ -519,7 +542,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #171616;
   text-align: center;
-  margin-top: 300px;
+  margin-top: 200px;
   font-size: 20px;
   font-weight: 400;
 }
@@ -1059,7 +1082,7 @@ body {
   }
 
   .video-section{
-    height: 1000px;
+    height: 1600px;
     background: url(./images//Frame\ 2.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -1073,13 +1096,19 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 0px !important;
+    padding: 20px !important;
+    margin-top: 250px;
   }
 
   .record-section h3{
     font-size: 15px;
     margin-top: 30px;
     line-height: 25px;
+  }
+
+  .records h3{
+    font-size: 25px;
+    margin-top: -40px;
   }
 
   .record-text{

@@ -9,7 +9,9 @@ import { GiLightBulb } from "react-icons/gi";
 import { MdOutlineRadioButtonChecked } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
-import { FaPhone, FaLinkedin, FaYoutube } from "react-icons/fa6";
+import { FaPhone, FaLinkedin, FaYoutube,} from "react-icons/fa6";
+import { PiChalkboardTeacher, PiUsersFour } from "react-icons/pi";
+import { MdOutlineEventNote } from "react-icons/md";
 import { FaGooglePlay } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import slide1 from './images/slide1.png';
@@ -141,6 +143,7 @@ function App() {
     if (video) {
       video.play();
       setIsPlaying(true);
+      video.controls = true;
     }
   };
 
@@ -351,7 +354,9 @@ function App() {
       <div className='video-section'>
         <center>
           <div className='video-container'>
-            <video id='exampleVideo' controls={!isPlaying}>
+            <video id='exampleVideo' 
+            onClick={handlePlay}
+            controls={!isPlaying}>
               <source src = "https://videos.pexels.com/video-files/2887463/2887463-hd_1920_1080_25fps.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -368,9 +373,27 @@ function App() {
                 <h4>Make Profession An Area Of</h4>
                 <h4 className='record-caption'>Choice Among All Sections Of Society</h4>
               </div>
-              <div className='records'></div>
-              <div className='records'></div>
-              <div className='records'></div>
+              <div className='records'>
+                <PiUsersFour size={80} className='icon'/>
+                <div>
+                  <h2>150+</h2>
+                  <h3>Active Members</h3>
+                </div>
+              </div>
+              <div className='records'>
+                <PiChalkboardTeacher size={80} className='icon'/>
+                <div>
+                  <h2>20+</h2>
+                  <h3>Active Faculty</h3>
+                </div>
+              </div>
+              <div className='records'>
+                <MdOutlineEventNote size={80} className='icon'/>
+                <div>
+                  <h2>10+</h2>
+                  <h3>Annual Contests</h3>
+                </div>
+              </div>
             </div>
           </center>
         </center>
