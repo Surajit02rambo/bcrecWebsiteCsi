@@ -409,23 +409,48 @@ body {
   padding-right: 50px;
 }
 
-.teacher-section img{
-  height: 450px;
-  width: 380px;
-}
-
 .teacher-section h3{
   font-size: 45px;
   text-align: left;
   font-family: "Kumbh Sans", sans-serif;
   line-height: 70px;
 }
+
 .teacher .back{
-  background-color: rgb(8, 69, 209);
+  background-color: white;
   height: 400px;
   width: 400px;
-  margin-top: -350px;
-  margin-left: 100px;
+  padding: 50px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #171616;
+  text-align: center;
+  box-shadow: 5px 5px 8px rgb(140, 135, 135);
+  z-index: 9999;
+}
+
+
+.teacher .back img{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.teacher .back p{
+  font-size: 25px;
+  color: rgb(13, 111, 223);
+  font-weight: 600;
+}
+
+.teacher .back pre{
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: -20px;
+}
+
+.teacher .back h3{
+  font-size: 20px;
+  text-align: center;
 }
 
 .video-section {
@@ -858,7 +883,7 @@ body {
   }
 
   .teacher-details{
-    width: 90%;
+    width: 100%;
   }
 
   .teacher-section h3{
@@ -1006,6 +1031,10 @@ body {
     margin-top: 150px;
   }
 
+  .team h4{
+    font-size: 35px;
+  }
+  
   .team-box{
     margin-top: 900px;
   }
@@ -1030,6 +1059,10 @@ body {
     margin-top: 100px;
   }
 
+  .teacher h4{
+    font-size: 35px;
+  }
+
   .teacher-section{
     display: flex;
     flex-direction: column !important;
@@ -1037,15 +1070,24 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .teacher img{
-    margin-top: 100px;
-    height: 250px;
-    width: 200px;
-  }
+
   .back{
-    display: none;
+    width: 200px !important;
+    margin-top: 250px;
   }
 
+  .back p{
+    font-size: 20px !important;
+  }
+
+  .back pre{
+    font-size: 18px !important;
+    margin-top: -5px !important;
+  }
+
+  .back h3{
+    font-size: 10px !important;
+  }
   .footer{
     height: 1500px;
     margin-top: 1800px;
@@ -1086,6 +1128,7 @@ body {
     background: url(./images//Frame\ 2.png);
     background-size: cover;
     background-repeat: no-repeat;
+    margin-top: 300px;
   }
 
   .play-button{

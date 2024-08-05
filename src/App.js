@@ -341,8 +341,12 @@ function App() {
           <div className='teacher-section'>
             <div className='teacher-details'>
               <center>
-                <img src = {KM_Sir} alt = "name" />
-                <div className='back'></div>
+                <div className='back'>
+                   <img src = {KM_Sir} alt = "name" />
+                   <p>MD. Keramot Hossain Mondal</p>
+                   <pre>Associate Professor</pre>
+                   <h3>Department of Information Technology</h3>
+                </div>
               </center>
             </div>
             <h3>" This section is dedicated to the teacher to speak on some technical features related to the association which is to be added later including his own thoughts, mission, vission & retrospection on CSI BCREC."</h3>
