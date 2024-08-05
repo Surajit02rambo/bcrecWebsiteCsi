@@ -980,7 +980,7 @@ body {
   }
 
   .team{
-    margin-top: 300px;
+    margin-top: 150px;
   }
 
   .team-box{
@@ -1011,8 +1011,11 @@ body {
     display: flex;
     flex-direction: column !important;
     margin-top: 100px !important;
+    justify-content: center;
+    align-items: center;
   }
   .teacher img{
+    margin-top: 100px;
     height: 250px;
     width: 200px;
   }
@@ -1070,15 +1073,21 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 0px !important;
   }
 
   .record-section h3{
     font-size: 15px;
+    margin-top: 30px;
+    line-height: 25px;
+  }
+
+  .record-text{
     margin-top: 50px;
   }
 
   .record-section h4{
-    font-size: 18px;
-    line-height: 15px !important;
+    font-size: 25px;
+    line-height: 35px !important;
   }
 }

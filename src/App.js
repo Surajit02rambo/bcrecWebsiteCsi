@@ -363,7 +363,7 @@ function App() {
           </div>
           <center>
             <div className='record-section'>
-              <div>
+              <div className='record-text'>
                 <h3>Our Mission Is To</h3>
                 <h4>Make Profession An Area Of</h4>
                 <h4 className='record-caption'>Choice Among All Sections Of Society</h4>
