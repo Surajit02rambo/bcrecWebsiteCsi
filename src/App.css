@@ -974,13 +974,13 @@ body {
   }
 
   #home img{
-    height: 600px;
+    height: 800px;
     width: 120% !important;
   }
   .carousel-caption{
     margin-left: -280px !important;
     width: 100vw !important;
-    margin-bottom: -150px;
+    margin-bottom: -50px;
   }
   .carousel-caption h1{
     font-size: 20px;
@@ -1050,6 +1050,7 @@ body {
 
   .team{
     margin-top: 100px;
+    height: auto !important;
   }
   
   .team-box{
@@ -1115,7 +1116,7 @@ body {
   }
   .footer{
     height: 1500px;
-    margin-top: 1800px;
+    margin-top: 100px;
   }
 
   .footer input{
