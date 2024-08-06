@@ -666,7 +666,7 @@ body {
 }
 
 .footer{
-  height: 1000px;
+  height: auto;
   margin-top: 200px;
   overflow-x: hidden !important;
   background: url(./images/footer.png);
@@ -728,7 +728,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: white;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 150px;
   cursor: pointer;
 }
 .social-media h1{
@@ -770,7 +770,6 @@ body {
 }
 
 .copyright{
-  height: 200px;
   width: 100%;
   background-color: transparent;
   border-top: 1.5px solid white;
@@ -782,7 +781,6 @@ body {
 }
 
 .copyright p{
-  margin-top: 50px;
   font-size: 20px;
 }
 
@@ -946,18 +944,17 @@ body {
     align-items: center;
     text-align: center;
   }
-
-  .social-media h1{
-    display: none;
-  }
-
+  
   .social-media{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    text-align: left;
+    padding-left: 50px;
     margin-top: 250px;
+  }
+
+  .social-icons{
+    margin-left: -100px;
   }
 
   .carousel-buttons.bottom-center button{
@@ -1115,8 +1112,9 @@ body {
     margin-top: 40px;
   }
   .footer{
-    height: 1500px;
+    height: auto;
     margin-top: 100px;
+    text-align: left !important;
   }
 
   .footer input{
@@ -1125,6 +1123,7 @@ body {
 
   .contact {
     padding: 10px;
+    margin-top: 80px;
     gap: 20px;
   }
   .contact h1{
@@ -1135,6 +1134,7 @@ body {
   .social-media{
     margin-top: 150px;
     gap: 20px;
+    text-align: left;
   }
 
   .social-media h2{
@@ -1145,8 +1145,17 @@ body {
     font-size: 15px;
   }
 
+  .courses{
+    left: -100px;
+  }
+
+  .copyright{
+    margin-top: 50px;
+  }
+
   .copyright p{
     font-size: 15px !important;
+    padding: 50px;
   }
 
   .video-section{

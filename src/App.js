@@ -444,7 +444,7 @@ function App() {
           </center>
           <div className='social-media'>
               <h1>CSI BCREC</h1>
-              <div>
+              <div className='courses'>
                 <h2>Courses</h2>
                 <p>UI/UX Design</p>
                 <p>Business Strategy</p>
