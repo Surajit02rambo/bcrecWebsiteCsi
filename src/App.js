@@ -21,8 +21,11 @@ import Surajit from './images/Surajit.jpg';
 import Priyanka from './images/Priyanka.jpg';
 import Sayak from './images/Sayak.jpg';
 import Debjit from './images/Debjit.jpg';
-import Abir from './images/Abir.png';
+import Abir from './images/Abir.jpg';
 import KM_Sir from './images/KM_Sir.jpg';
+import Daipayan from './images/Daipayan.jpg';
+import Kuntal from './images/Kuntal.jpg';
+import Anish from './images/Anish.jpg';
 import logo from './images/Logo.png'
 
 function App() {
@@ -33,6 +36,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollTopVisible, setScrollTopVisible] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [visibleTeamMembers, setVisibleTeamMembers] = useState(4);
 
   const slides = [
     {
@@ -97,24 +101,15 @@ function App() {
       name2: "",
       role2: "",
     },
-    {
-      title: "Testimony Coming Soon!",
-      testimony: "",
-      imgSrc: '',
-      name: "",
-      role: "",
-      
-      title1: "Testimony Coming Soon!",
-      testimony1: "",
-      imgSrc1: '',
-      name1: "",
-      role1: "",
+  ];
 
-      title2: "Testimony Coming Soon!",
-      testimony2: "",
-      imgSrc2: '',
-      name2: "",
-    }
+  const teamMembers = [
+    { imgSrc: Abir, name: 'Abir Mukherjee', role: 'Undergraduate Student', position: 'Chairperson', dept: 'Department of AIML (CSE)' },
+    { imgSrc: Debjit, name: 'Debjit Bakshi', role: 'Undergraduate Student', position: 'Vice-Chairperson', dept: 'Department of Information Technology' },
+    { imgSrc: Anish, name: 'Anish Rudra', role: 'Undergraduate Student', position: 'Secretary', dept: 'Department of Information Technology' },
+    { imgSrc: Kuntal, name: 'Kuntal Banerjee', role: 'Undergraduate Student', position: 'Treasurer', dept: 'Department of Information Technology' },
+    { imgSrc: Daipayan, name: 'Daipayan Roy', role: 'Undergraduate Student', position: 'Event Manager', dept: 'Department of AIML(CSE)' },
+    // Add more members here as needed
   ];
 
   const handlePrev = () => {
@@ -184,6 +179,10 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const loadMoreTeamMembers = () => {
+    setVisibleTeamMembers((prevVisible) => prevVisible + 4);
+  };
 
   return (
     <div className="App">
@@ -409,53 +408,28 @@ function App() {
         <h4>Member's Association</h4>
         <center>
           <div className='team-box'>
-            <div className='member'>
-              <img src = {Abir} alt = "name" />
+          {teamMembers.slice(0, visibleTeamMembers).map((member, index) => (
+            <div className='member' key={index}>
+              <img src = {member.imgSrc} alt = {member.name} />
               <div>
-                <h2>Abir Mukherjee</h2>
-                <h3>Undergraduate Student</h3>
+                <h2>{member.name}</h2>
+                <h3>{member.role}</h3>
               </div>
               <div>
-                <h4>Chairperson</h4>
-                <p>Department of AIML (CSE)</p>
-              </div>
-            </div>
-            <div className='member'>
-              <img src = {Debjit} alt = "name" />
-              <div>
-                <h2>Debjit Bakshi</h2>
-                <h3>Undergraduate Student</h3>
-              </div>
-              <div>
-                <h4>Vice-Chairperson</h4>
-                <p>Department of Information Technology</p>
+                <h4>{member.position}</h4>
+                <p>{member.dept}</p>
               </div>
             </div>
-            <div className='member'>
-              <img src = "https://i.postimg.cc/CLz4W2Bj/Whats-App-Image-2024-05-05-at-12-24-45-48b18bab.jpg" alt = "name" />
-              <div>
-                <h2>Anish Rudra</h2>
-                <h3>Undergraduate Student</h3>
-              </div>
-              <div>
-                <h4>Secretary</h4>
-                <p>Department of Information Technology</p>
-              </div>
-            </div>
-            <div className='member'>
-              <img src = "https://i.postimg.cc/CLz4W2Bj/Whats-App-Image-2024-05-05-at-12-24-45-48b18bab.jpg" alt = "name" />
-              <div>
-                <h2>Kuntal Banerjee</h2>
-                <h3>Undergraduate Student</h3>
-              </div>
-              <div>
-                <h4>Treasurer</h4>
-                <p>Department of Information Technology</p>
-              </div>
-            </div>
+          ))}
           </div>
+          {visibleTeamMembers < teamMembers.length && (
+          <div className="load-more-container">
+            <button className="load-more" onClick={loadMoreTeamMembers}>VIEW MORE MEMBERS</button>
+          </div>
+          )}
         </center>
       </div>
+
 
       {/* Footer */}
       <div className='footer'> 

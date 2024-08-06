@@ -41,6 +41,7 @@ body {
   font-style: normal;
   font-size: 20px;
   letter-spacing: 2px;
+  z-index: 999999;
 }
 .logo img {
   height: 105px; /* Adjust based on your logo size */
@@ -57,9 +58,9 @@ body {
 .navbar nav ul li {
   display: inline;
   font-optical-sizing: auto;
-  font-size: 17px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-size: 20px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 200;
   font-style: normal;
   letter-spacing: 2px;
 }
@@ -309,7 +310,6 @@ body {
 
 .carousel-box {
   background: white;
-  border: 1px solid #ddd;
   border-radius: 8px;
   padding: 40px;
   margin: 0 20px;
@@ -425,7 +425,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #171616;
   text-align: center;
-  box-shadow: 5px 5px 8px rgb(140, 135, 135);
   z-index: 9999;
 }
 
@@ -561,7 +560,7 @@ body {
 }
 
 .team{
-  height: 600px;
+  height: auto;
   width: 100%;
   background-color: transparent;
   font-family: 'Montserrat', sans-serif;
@@ -579,11 +578,12 @@ body {
 }
 
 .team-box{
-  height: 500px;
-  width: 95vw;
+  height: auto;
+  width: 100vw;
   background-color: transparent;
   justify-content: center;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 50px;
 }
@@ -598,7 +598,6 @@ body {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
-  box-shadow: 5px 5px 8px rgb(210, 206, 206);
   transition: 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -647,9 +646,28 @@ body {
   margin-top: 30px;
   font-weight: 600;
 }
+
+.load-more{
+  margin-top: 100px;
+  padding: 20px;
+  background-color: rgb(8, 69, 209);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s linear;
+}
+
+.load-more:hover{
+  background-color: #333;
+}
+
 .footer{
-  margin-top: 300px;
   height: 1000px;
+  margin-top: 200px;
   overflow-x: hidden !important;
   background: url(./images/footer.png);
   background-size: cover;
@@ -791,10 +809,10 @@ body {
   }
   .nav-links {
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     left: -100%; /* Hidden off-screen initially */
     height: 100%;
-    background-color: #333;
+    background-color: #101114;
     overflow: hidden !important;
     position: fixed;
     top: 0;
@@ -812,10 +830,13 @@ body {
   .nav-links ul {
     flex-direction: column;
     padding-top: 50px 0;
+    margin-top: 100px !important;
   }
 
   .nav-links ul li {
     margin: 10px 20px;
+    padding-bottom: 20px;
+    border-bottom: 0.5px solid rgb(77, 77, 77);
   }
 
   .hamburger {
@@ -1028,15 +1049,15 @@ body {
   }
 
   .team{
-    margin-top: 150px;
+    margin-top: 100px;
+  }
+  
+  .team-box{
+    margin-top: 0px;
   }
 
   .team h4{
     font-size: 35px;
-  }
-  
-  .team-box{
-    margin-top: 900px;
   }
 
   .member{
