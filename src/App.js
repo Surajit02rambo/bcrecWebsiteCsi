@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { MdExplore } from 'react-icons/md';
-import { FaBars, FaTimes, FaArrowUp } from 'react-icons/fa';
+import { FaBars, FaTimes, } from 'react-icons/fa';
+import { LuArrowBigUpDash } from "react-icons/lu"
 import { LiaChalkboardTeacherSolid } from "react-icons/lia";
 import { GrCertificate } from "react-icons/gr";
 import { GiLightBulb } from "react-icons/gi";
@@ -11,6 +12,7 @@ import { FaFacebook } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
 import { FaPhone, FaLinkedin, FaYoutube,} from "react-icons/fa6";
 import { PiChalkboardTeacher, PiUsersFour } from "react-icons/pi";
+import { GiArchiveRegister } from "react-icons/gi";
 import { MdOutlineEventNote } from "react-icons/md";
 import { FaGooglePlay } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
@@ -36,7 +38,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollTopVisible, setScrollTopVisible] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [visibleTeamMembers, setVisibleTeamMembers] = useState(4);
+  const [visibleTeamMembers, setVisibleTeamMembers] = useState(3);
 
   const slides = [
     {
@@ -181,7 +183,7 @@ function App() {
   }, []);
 
   const loadMoreTeamMembers = () => {
-    setVisibleTeamMembers((prevVisible) => prevVisible + 4);
+    setVisibleTeamMembers((prevVisible) => prevVisible + 3);
   };
 
   return (
@@ -198,8 +200,8 @@ function App() {
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#courses">Contests</a></li>
-            <li><a href="#ourteam">Our Team</a></li>
             <li><a href="#second-carousel">Testimonials</a></li>
+            <li><a href="#ourteam">Our Team</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <div className="close-menu" onClick={closeMenu}>
@@ -430,6 +432,26 @@ function App() {
         </center>
       </div>
 
+      {/* Registration Section */}
+      <div className='registration'>
+          <div className='registration-box'>
+            <div>
+              <p>Get Yourself Registered</p>
+              <h1>Register Your Account To Get Access to The Contests</h1>
+              <p className='span'>Great opportunity to explore and make yourself familiar with recent trends</p>
+              <div className='learning'>
+                <div className='learn'><GiArchiveRegister size={80} className='icon'/></div>
+                <div>
+                  <h2>Transform Access To Education</h2>
+                  <p>Discover creative projects with limited editions of</p>
+                  <p>technology, design and more.</p>
+                </div>
+              </div>
+            </div>
+            <div className='form'></div>
+          </div>
+      </div>
+
 
       {/* Footer */}
       <div className='footer'> 
@@ -447,7 +469,7 @@ function App() {
               <div className='courses'>
                 <h2>Courses</h2>
                 <p>UI/UX Design</p>
-                <p>Business Strategy</p>
+                <p>Hackathons</p>
                 <p>Web Development</p>
                 <p>Progamming Concepts</p>
                 <p>Software Development</p>
@@ -471,7 +493,7 @@ function App() {
       </div>
       {scrollTopVisible && (
         <button className="scroll-to-top" onClick={scrollToTop}>
-          <FaArrowUp size={25} />
+          <LuArrowBigUpDash size={35} />
         </button>
       )}
     </div>

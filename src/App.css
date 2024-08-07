@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Quicksand:wght@300..700&family=Special+Elite&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Kumbh+Sans:wght@100..900&family=Quicksand:wght@300..700&family=Special+Elite&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Grey+Qo&family=Kaushan+Script&family=Kumbh+Sans:wght@100..900&family=Quicksand:wght@300..700&family=Special+Elite&display=swap');
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -109,7 +108,7 @@ body {
 }
 
 .carousel-inner button:hover{
-  background-color: rgb(10, 72, 10);
+  background-color: rgb(42, 40, 40);
 }
 
 .carousel-inner button.clicked .discover{
@@ -156,14 +155,14 @@ body {
 }
 .carousel h1{
   position: absolute;
-  margin-top: 60px;
+  margin-top: 70px;
   color: rgb(77, 160, 255);
   margin-left: 300px;
-  font-family: "Kaushan Script", cursive;
-  font-size: 43px;
+  font-family: "Special Elite", system-ui;
+  font-size: 40px;
   font-weight: 400;
   font-style: normal;
-  letter-spacing: 1.5px;
+  letter-spacing: 4.5px;
   animation: slideUp 0.5s ease-in-out;
 }
 
@@ -648,12 +647,12 @@ body {
 }
 
 .load-more{
-  margin-top: 100px;
+  margin-top: 80px;
   padding: 20px;
   background-color: rgb(8, 69, 209);
   color: white;
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 17px;
   letter-spacing: 1px;
   border: none;
   cursor: pointer;
@@ -663,6 +662,81 @@ body {
 
 .load-more:hover{
   background-color: #333;
+}
+
+.registration{
+  height: auto;
+  width: 100%;
+  background: url(./images/registration.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-box{
+  display: flex;
+  gap: 100px;
+  text-align: left;
+  padding: 100px;
+  background-color: transparent;
+  color: white;
+}
+
+.registration-box p{
+  font-size: 30px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+}
+
+.registration-box h1{
+  font-size: 60px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.registration-box .span{
+  color: #c8c8c8;
+}
+
+.registration-box .form{
+  height: 600px;
+  width: 900px;
+  background-color: white;
+  margin-top: 100px;
+  border-radius: 8px;
+}
+
+.learning{
+  display: flex;
+  margin-top: 100px;
+  gap: 50px;
+}
+
+.learn{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #e4ebff3c;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.learn .icon{
+  color: rgb(0, 119, 255);
+}
+.learning h2{
+  font-size: 30px;
+  font-family: "Kumbh Sans", sans-serif;
+  margin-top: 15px;
+}
+
+.learning p{
+  font-size: 25px;
+  font-family: "Kumbh Sans", sans-serif;
+  color: rgb(201, 201, 201);
+  line-height: 10px;
 }
 
 .footer{
@@ -772,12 +846,13 @@ body {
 .copyright{
   width: 100%;
   background-color: transparent;
-  border-top: 1.5px solid white;
+  border-top: 1.5px solid rgb(97, 95, 95);
   color: white;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   margin-top: 72px;
   align-items: center;
+  padding: 20px;
 }
 
 .copyright p{
@@ -786,12 +861,13 @@ body {
 
 .scroll-to-top {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 50%;
   background-color: rgb(8, 69, 209);
   color: #fff;
   border: none;
-  padding: 20px;
+  padding: 15px;
   cursor: pointer;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
@@ -982,6 +1058,7 @@ body {
   .carousel-caption h1{
     font-size: 20px;
     margin-top: 15px;
+    letter-spacing: 1px !important;
   }
   .carousel-caption h3{
     font-size: 35px;
@@ -1196,5 +1273,32 @@ body {
   .record-section h4{
     font-size: 25px;
     line-height: 35px !important;
+  }
+
+  .registration-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .learning{
+    display: none;
+  }
+
+  .registration-box h1{
+    font-size: 40px;
+  }
+
+  .registration-box p{
+    font-size: 25px;
+  }
+
+  .form{
+    margin-top: -50px !important;
+    width: 350px !important;
+    padding: 20px;
+    height: 500px !important;
   }
 }
